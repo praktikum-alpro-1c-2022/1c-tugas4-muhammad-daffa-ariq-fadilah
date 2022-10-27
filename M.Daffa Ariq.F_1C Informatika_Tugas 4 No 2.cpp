@@ -7,14 +7,16 @@ int main(){
     cin >> username;
     cout << "Masukkan password: ";
     cin >> password;
-    if(username == "Admin" && password == "Admin123"){
-        cout << "Login berhasil";
-    }else if(username == "Admin"){
-        cout << "Password salah";
-    }else if(password == "Admin123"){
-        cout << "Username salah";
+    if(username=="Admin"||password=="Admin123"){
+        if(username!="Admin"){
+            cout << "username salah";
+        }else if(password!="Admin123"){
+            cout << "password salah";
+        }else{
+            cout << "login berhasil";
+        }
     }else{
-        cout << "Username dan password salah";
+        cout << "username dan password salah";
     }
     return 0;
 }
